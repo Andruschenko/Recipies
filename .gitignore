@@ -16,5 +16,5 @@
 !/log/.keep
 /tmp
 
-# Ignore any Jet Brains Intellij IDE
-/.idea
+# Ignore any Jet Brains Intellij IDE 
+.idea/
