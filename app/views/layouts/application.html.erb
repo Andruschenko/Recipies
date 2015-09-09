@@ -7,30 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <%= link_to "Recipies", "", class: "navbar-brand", id: "logo" %>
-      <%= link_to "Recipies", href: '', class: "navbar-brand" do %>
-        <%= image_tag '7up-logo-2014.jpg', width: 20, height: 20, alt: 'Logo'%>
-      <% end %>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-      </ul>
-      <div class="nav navbar-nav navbar-right">
-        <div class="nav-item">
-          <%= link_to "Sign up now!", "", class: "btn btn-default" %>
-        </div>
-      </div>
-    </div>
-  </header>
+  <%= render 'layouts/navigation' %>
 
   <div class="container">
     <%= yield %>
-    <div class="footer">
-      <p>&copy; Recipies 2015</p>
-    </div>
+
+    <%= render 'layouts/footer' %>
+
   </div>
 
 </body>

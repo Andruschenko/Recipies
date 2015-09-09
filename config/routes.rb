@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
+  root 'pages#home' # set rerouting of root page on server, i.e. http://localhost:3000
+
   get '/home' => 'pages#home'  # or:  get '/home', to: 'pages#home' (pages controller with home action)
+
 end
 
 
