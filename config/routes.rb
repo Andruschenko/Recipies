@@ -4,6 +4,16 @@ Rails.application.routes.draw do
 
   get '/home' => 'pages#home'  # or:  get '/home', to: 'pages#home' (pages controller with home action)
 
+  # get '/recipes' => 'recipes#index'
+  # get '/recipes/new' => 'recipes#new', as: 'new_recipe'
+  # post '/recipes' => 'recipes#create'
+  # get '/recipes/:id/edit' => 'recipes#edit', as: 'edit_recipe'
+  # patch '/recipes/:id' => 'recipes#update'
+  # get '/recipes/:id' => 'recipes#show', as: 'recipe'
+  # delete '/recipes/:id' => 'recipes#destroy'
+
+  resources :recipes
+
 end
 
 

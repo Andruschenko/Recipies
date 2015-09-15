@@ -1,11 +1,21 @@
 <header class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <%= link_to "Recipies", "", class: "navbar-brand", id: "logo" %>
-    <%= link_to "Recipies", href: '', class: "navbar-brand" do %>
+    <%= link_to "Recipies", root_path, class: "navbar-brand", id: "logo" %>
+    <%= link_to "Recipies", href: root_path, class: "navbar-brand" do %>
       <%= image_tag '7up-logo-2014.jpg', width: 20, height: 20, alt: 'Logo'%>
     <% end %>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+      <li class="active">
+        <!-- 2 ways of creating links -->
+        <%= link_to "New recipe (link 1)", new_recipe_path %>
+      </li>
+      <li>
+        <%= link_to(new_recipe_path) do %>
+          New recipe (link 2)
+          <span class="sr-only">(current)</span>
+        <% end %>
+        <!-- <a href="#">Link <span class="sr-only">(current)</span></a> -->
+      </li>
       <li><a href="#">Link</a></li>
       <li><a href="#">Link</a></li>
     </ul>
