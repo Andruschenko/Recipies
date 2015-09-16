@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave', '0.10.0'
 gem 'mini_magick', '3.8.0'
 
+gem 'fog'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
