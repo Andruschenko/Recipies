@@ -46,9 +46,9 @@ class RecipesController < ApplicationController
   private
 
     def recipe_params
-      # Strong parameters - have to be declared explicitly
+      # Strong parameters - have to be declared explicitly (whitelabel parameters)
       # require only recipe field in params and only permit certain of its fields
-      params.require(:recipe).permit(:name, :summary, :description)
+      params.require(:recipe).permit(:name, :summary, :description, :picture)
     end
 
 end
